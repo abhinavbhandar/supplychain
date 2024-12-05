@@ -5,7 +5,7 @@
 ### [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
 
 ### SUBJECT
-The client is experiencing a decline in sales over the past two months and wants to understand the underlying causes. This analysis will focus on customer churn, predicting future sales trends, and addressing inefficiencies in the supply chain to enhance operations and improve customer satisfaction.
+The client is experiencing a significant decline in sales over the past two months and wants to understand the underlying causes. This analysis will focus on customer churn, predicting future sales trends, and addressing inefficiencies in the supply chain to enhance operations and improve customer satisfaction.
 ### TASK
 * Reducing Customer Churn
 * Improve Logistics Management
@@ -35,18 +35,102 @@ The client is experiencing a decline in sales over the past two months and wants
 * Marking and removing high-risk suppliers and moving towards diversifying suppliers, implementing risk assessments, and negotiating long-term contracts with contingencies.
 * Stop manufacturing of CDs, Baby products, Soccer and Basketball products.
 
-SALES ANALYSIS:
-**SALES KPI:**
+SALES ANALYSIS:  
+**SALES KPI:**  
+
+*Total Sales* =  
+SUM(fact_orders[Sales])  
+
+*Total Profit* =  
+SUM(fact_orders[Order Profit Per Order])  
+
+*Total Cost* =  
+[Total Sales] - [Total Profit]  
+
+*Total Orders* =  
+DISTINCTCOUNT(fact_orders[Order Id])  
+
+*LastMonthSales* =  
+CALCULATE([Total Sales],(DATEADD(fact_orders[Oder Date].[Date] ,-1,MONTH)))  
+
+*MoM Sales %* =  
+DIVIDE(
+    [Total Sales]-[LastMonthSales]
+    ,[LastMonthSales], 0)  
 
 ![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
 
-LOGISTICS ANALYSIS:
-**LOGISTICS KPI:**
+LOGISTICS ANALYSIS:  
+**LOGISTICS KPI:**  
+*Lead Time* =  
+AVERAGEX(
+    fact_shipping,
+    fact_shipping[Days for shipping (real)]
+)  
+
+*Line Fill Rate* =  
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(fact_orders),
+        fact_orders[Order Status] = "COMPLETE" || fact_orders[Order Status] = "PENDING_PAYMENT"
+    ),
+    COUNTROWS(fact_orders)
+)  
+
+*OTIF %* =  
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(fact_shipping),
+        FILTER(
+            fact_shipping,
+            fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]
+        ),
+        FILTER(
+            fact_orders,
+            fact_orders[Order Status] = "COMPLETE" || fact_orders[Order Status] = "PENDING_PAYMENT"
+        )
+    ),
+    COUNTROWS(fact_shipping)
+)  
+
+*Backorder Rate* =  
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(fact_orders),
+        fact_orders[Order Status] = "PENDING"
+    ),
+    COUNTROWS(fact_orders)
+)  
 
 ![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
 
-CUSTOMER CHURN ANALYSIS:
+CUSTOMER CHURN ANALYSIS:  
 **CUSTOMER KPI:**
+*Retention Rate* =  
+COUNTROWS(FILTER(GROUPBY( fact_orders, fact_orders[Customer Id]), [Total Orders] > 1))/DISTINCTCOUNT(fact_orders[Customer Id])  
+
+*Active Users* =  
+DISTINCTCOUNT(fact_orders[Customer Id])  
+
+*Order Frequency* =  
+DIVIDE(
+    DISTINCTCOUNT('fact_orders'[Order ID]),
+    DATEDIFF(
+        MIN(dim_date[Date]),
+        MAX('dim_date'[Date]),
+        MONTH
+    ),
+    0
+)  
+
+*On-Time Delivery %* =  
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(fact_shipping),
+        fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]
+    ),
+    COUNTROWS(fact_shipping)
+)  
 
 ![image](https://github.com/user-attachments/assets/38441698-9038-4d16-b185-dc86046c62c0)
 
@@ -54,5 +138,5 @@ CUSTOMER CHURN ANALYSIS:
 
 
 
-Snowflake Schema
+DATA MODEL: SNOWFLAKE SCHEMA
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
