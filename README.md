@@ -8,4 +8,18 @@ Alibaba hosted time-limited flash sales where customers could access substantial
 Tiered Discounts:
 Some sellers offered increasing discounts as the amount spent on Alibaba's platforms grew, encouraging customers to purchase more to unlock higher discounts.
 
+SALES ANALYSIS:
+![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
+
+LOGISTICS ANALYSIS:
+![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
+
+CUSTOMER ANALYSIS:
+![image](https://github.com/user-attachments/assets/38441698-9038-4d16-b185-dc86046c62c0)
+
+
+
+
+
+Snowflake Schema
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
