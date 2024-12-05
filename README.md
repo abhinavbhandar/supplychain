@@ -2,6 +2,10 @@
 Nov 11 Largest Singles Day sales ever - Alibaba says its sales alone were $25.3 billion
 America was the biggest contributer after china
 
+
+### [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
+
+
 **reason:**
 Discounts and Flash Sales:
 Alibaba hosted time-limited flash sales where customers could access substantial discounts on a wide range of products. These discounts were often exclusive to the Singles' Day event, creating urgency.
