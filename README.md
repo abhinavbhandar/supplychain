@@ -4,6 +4,13 @@
 ### [SALES Forecasting(ARIMA)](https://github.com/abhinavbhandar/supplychain/blob/main/Sales_Forecast_ARIMA.ipynb)
 ### [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
 
+### SUBJECT
+### TASK
+
+* customers from Africa, Asia and Oceania are more likely to leave as they have retention rate is less than 40%
+### ACTION
+### RESULT
+
 ### **cause**
 Nov 11 Largest Singles Day sales ever - Alibaba says its sales alone were $25.3 billion
 America was the biggest contributer after china
