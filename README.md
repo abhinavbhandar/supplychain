@@ -35,7 +35,7 @@ The client is experiencing a significant decline in sales over the past two mont
 * Marking and removing high-risk suppliers and moving towards diversifying suppliers, implementing risk assessments, and negotiating long-term contracts with contingencies.
 * Stop manufacturing of CDs, Baby products, Soccer and Basketball products.
 
-SALES ANALYSIS:  
+### SALES ANALYSIS:  
 **SALES KPI:**  
 
 *Total Sales* =  
@@ -60,7 +60,7 @@ DIVIDE(
 
 ![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
 
-LOGISTICS ANALYSIS:  
+### LOGISTICS ANALYSIS:  
 **LOGISTICS KPI:**  
 *Lead Time* =  
 AVERAGEX(
@@ -104,7 +104,7 @@ DIVIDE(
 
 ![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
 
-CUSTOMER CHURN ANALYSIS:  
+### CUSTOMER CHURN ANALYSIS:  
 **CUSTOMER KPI:**
 *Retention Rate* =  
 COUNTROWS(FILTER(GROUPBY( fact_orders, fact_orders[Customer Id]), [Total Orders] > 1))/DISTINCTCOUNT(fact_orders[Customer Id])  
@@ -138,5 +138,5 @@ DIVIDE(
 
 
 
-DATA MODEL: SNOWFLAKE SCHEMA
+**DATA MODEL: SNOWFLAKE SCHEMA**  
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
