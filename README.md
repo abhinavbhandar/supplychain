@@ -51,6 +51,11 @@ The client is experiencing a significant decline in sales over the past two mont
 
 ---
 
+### FORECAST RESULT
+DATASET: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)
+
+---
+
 ### SALES ANALYSIS:  
 **SALES KPI:**  
 
