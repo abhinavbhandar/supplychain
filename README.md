@@ -159,3 +159,15 @@ DIVIDE(
 
 ### DATA MODEL: SNOWFLAKE SCHEMA  
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
+
+---
+
+### CONCLUSION
+
+the analysis highlights critical areas impacting sales and operational efficiency within the supply chain. Key findings include customer churn in specific regions, inefficiencies in logistics, and external competition causing sales dips during peak periods. By implementing targeted marketing, optimizing delivery, diversifying suppliers, and discontinuing underperforming products, the client can address these challenges and improve overall performance.
+
+LINK: 
+
+[EDA & Data Pre-processing](https://github.com/abhinavbhandar/supplychain/blob/main/SupplyChainAnalytics.ipynb),
+[Demand Forecasting(ARIMA)](https://github.com/abhinavbhandar/supplychain/blob/main/Sales_Forecast_ARIMA.ipynb),
+[Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
