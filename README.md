@@ -52,9 +52,11 @@ The client is experiencing a significant decline in sales over the past two mont
 ---
 
 ### DATASET
-RAW DATASET: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
+
 FORECAST RESULT: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
-FACT & DIMENSION TABLES: [*LINK*]()
+FACT & DIMENSION TABLES: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/Supply%20chain%20tables.rar)  
+RAW DATASET: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
+
 ---
 
 ### SALES ANALYSIS:  
