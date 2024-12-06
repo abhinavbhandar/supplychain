@@ -1,39 +1,55 @@
-# SUPPLY CHAIN ANALYSIS
+## SUPPLY CHAIN ANALYSIS  
+
 
 ### STEP-1: [EDA & Data Pre-processing](https://github.com/abhinavbhandar/supplychain/blob/main/SupplyChainAnalytics.ipynb)
 ### STEP-2: [Demand Forecasting(ARIMA)](https://github.com/abhinavbhandar/supplychain/blob/main/Sales_Forecast_ARIMA.ipynb)
 ### STEP-3: [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
 
-### SUBJECT
-The client is experiencing a significant decline in sales over the past two months and wants to understand the underlying causes. This analysis will focus on customer churn, predicting future sales trends, and addressing inefficiencies in the supply chain to enhance operations and improve customer satisfaction.
-### TASK
-* Reducing Customer Churn
-* Improve Logistics Management
-* Increase Product Sales
-* Improve Customer Satisfaction
-* Cost Reduction
-### ACTION
-* Utilize the ARIMA model to forecast the monthly sales of year 2018.
-* Perform Customer churn Analysis to find patterns of customer activity and regions with less customer retention rate.
-* Perform Logistics Analysis to find top performing product categories.
-* Perform in-depth analysis to find the sudden decrease in sales for the month of November and December of year 2017.
-* Disruption caused by dependency on single or unreliable suppliers.
-* Stop manufacturing of least orders products.
-### RESULT
-* Sales is expected to increase by 5.91% in 2018.
-* customers from Africa, Asia and Oceania are more likely to leave as they have retention rate less than 40%.
-* Customers are mostly active at 4 PM and 10 PM and during Weekends.
-* Sales decrease in the month of November and December due to external factor: Large offers, time-limited sales and discount on multiple products by Alibaba on year end sales (Nov 11 Largest Singles Day sales ever - Alibaba says its sales alone were $25.3 billion, America was the biggest contributer after china).
-* Discount rate is monotonus for each month, there should be festival sales or limited time sales to increase sales.
-* More than 50% of orders are tagged with late delivery.
-* CDs, Baby products, Soccer and Basketball products are ordered in less quantity and cause loss.
-### SOLUTION
-* Festival based sales for the customers of Africa, Asia and Oceania to increase retention rate
-* Discount rate is monotonus for each month, there should be festival sales or limited time sales to increase sales.
-* Region based marketing on weekends during 4 PM to 10 PM.
-* Route optimization to reduce delivery time.
-* Marking and removing high-risk suppliers and moving towards diversifying suppliers, implementing risk assessments, and negotiating long-term contracts with contingencies.
-* Stop manufacturing of CDs, Baby products, Soccer and Basketball products.
+---
+
+### **SUBJECT**  
+The client is experiencing a significant decline in sales over the past two months and aims to uncover the root causes. This analysis will target customer churn, future sales trends, and supply chain inefficiencies to optimize operations and enhance customer satisfaction.
+
+---
+
+### **TASK**  
+1. Reduce customer churn.  
+2. Improve logistics management.  
+3. Increase product sales.  
+4. Enhance customer satisfaction.  
+5. Achieve cost reduction.  
+
+---
+
+### **ACTION**  
+1. Utilized the **ARIMA model** to forecast monthly sales for 2018.  
+2. Conducted **customer churn analysis** to identify patterns of customer activity and regions with low retention rates.  
+3. Performed **logistics analysis** to pinpoint top-performing product categories and inefficiencies.  
+4. Investigated the sales decline in **November and December 2017** due to competitive market factors.  
+5. Analyzed risks from supplier dependencies and proposed solutions to mitigate disruptions.  
+6. Identified and recommended the discontinuation of products with consistently low sales.  
+
+---
+
+### **RESULT**  
+1. Sales are forecasted to increase by **5.91%** in 2018.  
+2. Retention rates in Africa, Asia, and Oceania are below **40%**, highlighting regions with high churn.  
+3. Customer activity peaks at **4 PM and 10 PM**, especially on weekends.  
+4. November and December sales dropped due to external competition, notably Alibaba's **Singles Day** event generating $25.3 billion in sales.  
+5. Uniform monthly discounts were identified as ineffective; festival or time-limited sales are recommended.  
+6. Over **50% of orders** experienced delayed delivery.  
+7. Products such as **CDs, baby products, soccer, and basketball items** have low demand and contribute to losses.  
+
+---
+
+### **SOLUTION**  
+1. Introduce **festival-based sales** targeting Africa, Asia, and Oceania to boost retention.  
+2. Implement **region-specific marketing campaigns** during weekends from **4 PM to 10 PM**.  
+3. Diversify suppliers and establish risk assessment protocols to mitigate supply chain disruptions.  
+4. Optimize delivery routes to reduce delays.  
+5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
+
+---
 
 ### SALES ANALYSIS:  
 **SALES KPI:**  
@@ -60,7 +76,10 @@ DIVIDE(
 
 ![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
 
-### LOGISTICS ANALYSIS:  
+---
+
+### LOGISTICS ANALYSIS: 
+  
 **LOGISTICS KPI:**  
 *Lead Time* =  
 AVERAGEX(
@@ -104,6 +123,8 @@ DIVIDE(
 
 ![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
 
+---
+
 ### CUSTOMER CHURN ANALYSIS:  
 **CUSTOMER KPI:**
 *Retention Rate* =  
@@ -134,9 +155,7 @@ DIVIDE(
 
 ![image](https://github.com/user-attachments/assets/38441698-9038-4d16-b185-dc86046c62c0)
 
+---
 
-
-
-
-**DATA MODEL: SNOWFLAKE SCHEMA**  
+### DATA MODEL: SNOWFLAKE SCHEMA  
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
