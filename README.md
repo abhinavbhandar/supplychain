@@ -39,11 +39,6 @@ Purpose: Used for hosting project documentation, versioning, and sharing notes r
 
 ---
 
-### **SUBJECT**  
-The client is experiencing a significant decline in sales over the past two months and aims to uncover the root causes. This analysis will target customer churn, future sales trends, and supply chain inefficiencies to optimize operations and enhance customer satisfaction.
-
----
-
 ## Dataset
 
 Original Dataset: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
@@ -93,6 +88,11 @@ Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/mai
 |Product Status|180519|int64|1444280|
 |shipping date \(DateOrders\)|180519|datetime64\[ns\]|1444280|
 |Shipping Mode|180519|object|12604681|  
+
+---
+
+### **SUBJECT**  
+The client is experiencing a significant decline in sales over the past two months and aims to uncover the root causes. This analysis will target customer churn, future sales trends, and supply chain inefficiencies to optimize operations and enhance customer satisfaction.
 
 ---
 
@@ -170,112 +170,50 @@ I tried three different models:
 
 ## Model performance
 The ARIMA model outperformed the other approaches on the test and validation sets. 
-*	**Prophet**: Accuracy Percentage = 67%
-*	**ARIMA**: Accuracy Percentage = 88%  
+*	**Prophet**: Accuracy Percentage = 67.23%
+*	**ARIMA**: Accuracy Percentage = 88.44%  
 
 ---
 
 ### SALES ANALYSIS:  
-**SALES KPI:**  
 
-*Total Sales* =  
-SUM(fact_orders[Sales])  
+| **Sales KPI**        | **DAX Measure**                                                                                           |
+|-----------------------|----------------------------------------------------------------------------------------------------------|
+| *Total Sales*         | `SUM(fact_orders[Sales])`                                                                               |
+| *Total Profit*        | `SUM(fact_orders[Order Profit Per Order])`                                                              |
+| *Total Cost*          | `[Total Sales] - [Total Profit]`                                                                        |
+| *Total Orders*        | `DISTINCTCOUNT(fact_orders[Order Id])`                                                                  |
+| *LastMonthSales*      | `CALCULATE([Total Sales], (DATEADD(fact_orders[Oder Date].[Date], -1, MONTH)))`                          |
+| *MoM Sales %*         | `DIVIDE([Total Sales] - [LastMonthSales], [LastMonthSales], 0)`                                         |
 
-*Total Profit* =  
-SUM(fact_orders[Order Profit Per Order])  
-
-*Total Cost* =  
-[Total Sales] - [Total Profit]  
-
-*Total Orders* =  
-DISTINCTCOUNT(fact_orders[Order Id])  
-
-*LastMonthSales* =  
-CALCULATE([Total Sales],(DATEADD(fact_orders[Oder Date].[Date] ,-1,MONTH)))  
-
-*MoM Sales %* =  
-DIVIDE(
-    [Total Sales]-[LastMonthSales]
-    ,[LastMonthSales], 0)  
 
 ![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
 
 ---
 
 ### LOGISTICS ANALYSIS: 
-  
-**LOGISTICS KPI:**  
-*Lead Time* =  
-AVERAGEX(
-    fact_shipping,
-    fact_shipping[Days for shipping (real)]
-)  
 
-*Line Fill Rate* =  
-DIVIDE(
-    CALCULATE(
-        COUNTROWS(fact_orders),
-        fact_orders[Order Status] = "COMPLETE" || fact_orders[Order Status] = "PENDING_PAYMENT"
-    ),
-    COUNTROWS(fact_orders)
-)  
+| **Supply Chain KPI** | **DAX Measure**                                                                                                                                                                                                                                         |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Lead Time*          | `AVERAGEX(fact_shipping, fact_shipping[Days for shipping (real)])`                                                                                                                                                                                     |
+| *Line Fill Rate*      | `DIVIDE(CALCULATE(COUNTROWS(fact_orders), fact_orders[Order Status] = "COMPLETE" \|\| fact_orders[Order Status] = "PENDING_PAYMENT"), COUNTROWS(fact_orders))`                                                                                          |
+| *OTIF %*             | `DIVIDE(CALCULATE(COUNTROWS(fact_shipping), FILTER(fact_shipping, fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]), FILTER(fact_orders, fact_orders[Order Status] = "COMPLETE" \|\| fact_orders[Order Status] = "PENDING_PAYMENT")), COUNTROWS(fact_shipping))` |
+| *Backorder Rate*     | `DIVIDE(CALCULATE(COUNTROWS(fact_orders), fact_orders[Order Status] = "PENDING"), COUNTROWS(fact_orders))`                                                                                                                                               |
 
-*OTIF %* =  
-DIVIDE(
-    CALCULATE(
-        COUNTROWS(fact_shipping),
-        FILTER(
-            fact_shipping,
-            fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]
-        ),
-        FILTER(
-            fact_orders,
-            fact_orders[Order Status] = "COMPLETE" || fact_orders[Order Status] = "PENDING_PAYMENT"
-        )
-    ),
-    COUNTROWS(fact_shipping)
-)  
-
-*Backorder Rate* =  
-DIVIDE(
-    CALCULATE(
-        COUNTROWS(fact_orders),
-        fact_orders[Order Status] = "PENDING"
-    ),
-    COUNTROWS(fact_orders)
-)  
 
 ![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
 
 ---
 
 ### CUSTOMER CHURN ANALYSIS:  
-**CUSTOMER KPI:**
-*Retention Rate* =  
-COUNTROWS(FILTER(GROUPBY( fact_orders, fact_orders[Customer Id]), [Total Orders] > 1))/DISTINCTCOUNT(fact_orders[Customer Id])  
 
-*Active Users* =  
-DISTINCTCOUNT(fact_orders[Customer Id])  
+| **Customer KPI**      | **DAX Measure**                                                                                                                                                                                                                                       |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Retention Rate*      | `COUNTROWS(FILTER(GROUPBY(fact_orders, fact_orders[Customer Id]), [Total Orders] > 1)) / DISTINCTCOUNT(fact_orders[Customer Id])`                                                                                                                     |
+| *Active Users*        | `DISTINCTCOUNT(fact_orders[Customer Id])`                                                                                                                                                                                                            |
+| *Order Frequency*     | `DIVIDE(DISTINCTCOUNT('fact_orders'[Order ID]), DATEDIFF(MIN(dim_date[Date]), MAX('dim_date'[Date]), MONTH), 0)`                                                                                                                                       |
+| *On-Time Delivery %*  | `DIVIDE(CALCULATE(COUNTROWS(fact_shipping), fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]), COUNTROWS(fact_shipping))`                                                                                      |
 
-*Order Frequency* =  
-DIVIDE(
-    DISTINCTCOUNT('fact_orders'[Order ID]),
-    DATEDIFF(
-        MIN(dim_date[Date]),
-        MAX('dim_date'[Date]),
-        MONTH
-    ),
-    0
-)  
-
-*On-Time Delivery %* =  
-DIVIDE(
-    CALCULATE(
-        COUNTROWS(fact_shipping),
-        fact_shipping[Days for shipping (real)] <= fact_shipping[Days for shipment (scheduled)]
-    ),
-    COUNTROWS(fact_shipping)
-)  
 
 ![image](https://github.com/user-attachments/assets/38441698-9038-4d16-b185-dc86046c62c0)
 
