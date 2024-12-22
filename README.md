@@ -1,9 +1,41 @@
-## SUPPLY CHAIN ANALYSIS  
+# DATACO GLOBAL: SUPPLY CHAIN ANALYSIS  
 
+This project analyzes the supply chain operations of DataCo Global, focusing on identifying inefficiencies, patterns, and trends to enhance performance and optimize logistics. By leveraging advanced analytics, we explore key metrics such as shipping performance, order patterns, and cost distribution. The insights derived aim to guide decision-making for improving overall supply chain efficiency. Tools like Power BI, Python, and Excel were utilized for data visualization, demand forecasting and modeling.
 
-### STEP-1: [EDA & Data Pre-processing](https://github.com/abhinavbhandar/supplychain/blob/main/SupplyChainAnalytics.ipynb)
-### STEP-2: [Demand Forecasting(ARIMA)](https://github.com/abhinavbhandar/supplychain/blob/main/Sales_Forecast_ARIMA.ipynb)
-### STEP-3: [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)
+---
+
+|STEPS | LINK|
+|---|---|
+|EDA & Data Pre-processing | [Link](https://github.com/abhinavbhandar/supplychain/blob/main/SupplyChainAnalytics.ipynb)|
+|Demand Forecasting(ARIMA) | [Link](https://github.com/abhinavbhandar/supplychain/blob/main/Sales_Forecast_ARIMA.ipynb)|
+|Live Dashboard | [Link](https://app.powerbi.com/view?r=eyJrIjoiMTY4NWVkODEtODQ3Ny00YzkwLWI2MDYtNWIyYTg5OWNhNjM1IiwidCI6IjRjMzMwZTYyLWY1YWEtNDQ4MS04YzVlLTIxZmU0MmFlZDgxYyJ9)|
+
+---
+
+## Code and Resources Used
+
+**Python version:** 3.10.12  
+**Packages:** pandas, numpy, sklearn, matplotlib, seaborn, pmdarima, statsmodel, warnings, datetime  
+**Data Source:** [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)  
+  
+---
+
+## Tools and Platforms Used
+
+**Power BI**  
+Purpose: For creating interactive dashboards and data visualization to analyze supply chain trends and performance metrics.
+Key Features Used: Data import, transformation, DAX calculations, and custom visualization creation.
+  
+**Google Colab**  
+Purpose: For collaborative Python scripting, data preprocessing, statistical analysis, and building predictive models in a cloud-based environment.
+Key Features Used: Jupyter notebook interface, GPU/TPU acceleration, and integration with libraries like statsmodels and pandas.
+  
+**Microsoft Excel**  
+Purpose: For preliminary data exploration and manual data cleaning for creating dataset for predictive modeling.
+Key Features Used: Functions, conditional formatting, and simple visualizations.
+
+**Git Hub**  
+Purpose: Used for hosting project documentation, versioning, and sharing notes related to the project. 
 
 ---
 
@@ -48,32 +80,6 @@ The client is experiencing a significant decline in sales over the past two mont
 3. Diversify suppliers and establish risk assessment protocols to mitigate supply chain disruptions.  
 4. Optimize delivery routes to reduce delays.  
 5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
-
----
-## Code and Resources Used
-
-**Python version:** 3.10.12  
-**Packages:** pandas, numpy, sklearn, matplotlib, seaborn, pmdarima, statsmodel, warnings, datetime  
-**Data Source:** [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)  
-  
----
-
-## Tools and Platforms Used
-
-**Power BI**  
-Purpose: For creating interactive dashboards and data visualization to analyze supply chain trends and performance metrics.
-Key Features Used: Data import, transformation, DAX calculations, and custom visualization creation.
-  
-**Google Colab**  
-Purpose: For collaborative Python scripting, data preprocessing, statistical analysis, and building predictive models in a cloud-based environment.
-Key Features Used: Jupyter notebook interface, GPU/TPU acceleration, and integration with libraries like statsmodels and pandas.
-  
-**Microsoft Excel**  
-Purpose: For preliminary data exploration and manual data cleaning for creating dataset for predictive modeling.
-Key Features Used: Functions, conditional formatting, and simple visualizations.
-
-**Git Hub**  
-Purpose: Used for hosting project documentation, versioning, and sharing notes related to the project. 
 
 ---
 
