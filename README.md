@@ -50,19 +50,50 @@ The client is experiencing a significant decline in sales over the past two mont
 5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
 
 ---
-### Code and Resources Used
+## Code and Resources Used
 
 **Python version:** 3.10.12  
-**Packages:** pandas, numpy, sklearn, matplotlib, seaborn  
-**Software:** Power Bi  
+**Packages:** pandas, numpy, sklearn, matplotlib, seaborn, pmdarima, statsmodel, warnings, datetime  
 **Data Source:** [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)  
   
 ---
-### DATASET
 
-FORECAST RESULT: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
-FACT & DIMENSION TABLES: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/Supply%20chain%20tables.rar)  
-RAW DATASET: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
+## Tools and Platforms Used
+
+**Power BI**  
+Purpose: For creating interactive dashboards and data visualization to analyze supply chain trends and performance metrics.
+Key Features Used: Data import, transformation, DAX calculations, and custom visualization creation.
+  
+**Google Colab**  
+Purpose: For collaborative Python scripting, data preprocessing, statistical analysis, and building predictive models in a cloud-based environment.
+Key Features Used: Jupyter notebook interface, GPU/TPU acceleration, and integration with libraries like statsmodels and pandas.
+  
+**Microsoft Excel**  
+Purpose: For preliminary data exploration and manual data cleaning for creating dataset for predictive modeling.
+Key Features Used: Functions, conditional formatting, and simple visualizations.
+
+**Git Hub**  
+Purpose: Used for hosting project documentation, versioning, and sharing notes related to the project. 
+
+---
+
+## Dataset
+
+Original Dataset: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
+Fact & Dimension Tables: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/Supply%20chain%20tables.rar)  
+Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
+
+---
+
+## Data Cleaning
+After loading the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
+
+*	Remove duplicates
+*	Drop null values 
+*	Made columns for employer provided salary and hourly wages 
+*	Convert date columns to datetime format 
+*	Standardize text fields 
+*	drop unwanted columns 
 
 ---
 
