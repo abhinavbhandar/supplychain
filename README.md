@@ -86,46 +86,46 @@ Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/mai
 ---
 
 ## metadata
-|index|Column Name|Non-Null Count|Dtype|Memory Usage|
-|---|---|---|---|---|
-|Type|Type|180519|object|11405789|
-|Days for shipping \(real\)|Days for shipping \(real\)|180519|int64|1444280|
-|Days for shipment \(scheduled\)|Days for shipment \(scheduled\)|180519|int64|1444280|
-|Delivery Status|Delivery Status|180519|object|12888838|
-|Late\_delivery\_risk|Late\_delivery\_risk|180519|int64|1444280|
-|Category Id|Category Id|180519|int64|1444280|
-|Category Name|Category Name|180519|object|12583709|
-|Customer City|Customer City|180519|object|11681264|
-|Customer Country|Customer Country|180519|object|11830836|
-|Customer Fname|Customer Fname|180519|object|11241887|
-|Customer Id|Customer Id|180519|int64|1444280|
-|Customer Lname|Customer Lname|180511|object|11320664|
-|Customer Segment|Customer Segment|180519|object|11885330|
-|Customer State|Customer State|180519|object|10650758|
-|Department Name|Department Name|180519|object|11560513|
-|Latitude|Latitude|180519|float64|1444280|
-|Longitude|Longitude|180519|float64|1444280|
-|Market|Market|180519|object|11517193|
-|Order City|Order City|180519|object|12365509|
-|Order Country|Order Country|180519|object|12771693|
-|order date \(DateOrders\)|order date \(DateOrders\)|180519|datetime64\[ns\]|1444280|
-|Order Id|Order Id|180519|int64|1444280|
-|Order Item Discount|Order Item Discount|180519|float64|1444280|
-|Order Item Discount Rate|Order Item Discount Rate|180519|float64|1444280|
-|Order Item Product Price|Order Item Product Price|180519|float64|1444280|
-|Order Item Profit Ratio|Order Item Profit Ratio|180519|float64|1444280|
-|Order Item Quantity|Order Item Quantity|180519|int64|1444280|
-|Sales|Sales|180519|float64|1444280|
-|Order Profit Per Order|Order Profit Per Order|180519|float64|1444280|
-|Order Region|Order Region|180519|object|12570443|
-|Order State|Order State|180519|object|13600780|
-|Order Status|Order Status|180519|object|12027020|
-|Product Card Id|Product Card Id|180519|int64|1444280|
-|Product Image|Product Image|180519|object|22916476|
-|Product Name|Product Name|180519|object|16629539|
-|Product Status|Product Status|180519|int64|1444280|
-|shipping date \(DateOrders\)|shipping date \(DateOrders\)|180519|datetime64\[ns\]|1444280|
-|Shipping Mode|Shipping Mode|180519|object|12604681|  
+|Column Name|Non-Null Count|Dtype|Memory Usage|
+|---|---|---|---|
+|Type|180519|object|11405789|
+|Days for shipping \(real\)|180519|int64|1444280|
+|Days for shipment \(scheduled\)|180519|int64|1444280|
+|Delivery Status|180519|object|12888838|
+|Late\_delivery\_risk|180519|int64|1444280|
+|Category Id|180519|int64|1444280|
+|Category Name|180519|object|12583709|
+|Customer City|180519|object|11681264|
+|Customer Country|180519|object|11830836|
+|Customer Fname|180519|object|11241887|
+|Customer Id|180519|int64|1444280|
+|Customer Lname|180511|object|11320664|
+|Customer Segment|180519|object|11885330|
+|Customer State|180519|object|10650758|
+|Department Name|180519|object|11560513|
+|Latitude|180519|float64|1444280|
+|Longitude|180519|float64|1444280|
+|Market|180519|object|11517193|
+|Order City|180519|object|12365509|
+|Order Country|180519|object|12771693|
+|order date \(DateOrders\)|180519|datetime64\[ns\]|1444280|
+|Order Id|180519|int64|1444280|
+|Order Item Discount|180519|float64|1444280|
+|Order Item Discount Rate|180519|float64|1444280|
+|Order Item Product Price|180519|float64|1444280|
+|Order Item Profit Ratio|180519|float64|1444280|
+|Order Item Quantity|180519|int64|1444280|
+|Sales|180519|float64|1444280|
+|Order Profit Per Order|180519|float64|1444280|
+|Order Region|180519|object|12570443|
+|Order State|180519|object|13600780|
+|Order Status|180519|object|12027020|
+|Product Card Id|180519|int64|1444280|
+|Product Image|180519|object|22916476|
+|Product Name|180519|object|16629539|
+|Product Status|180519|int64|1444280|
+|shipping date \(DateOrders\)|180519|datetime64\[ns\]|1444280|
+|Shipping Mode|180519|object|12604681|  
 
 ---
 
