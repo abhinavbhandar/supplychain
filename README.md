@@ -44,45 +44,6 @@ The client is experiencing a significant decline in sales over the past two mont
 
 ---
 
-### **TASK**  
-1. Reduce customer churn.  
-2. Improve logistics management.  
-3. Increase product sales.  
-4. Enhance customer satisfaction.  
-5. Achieve cost reduction.  
-
----
-
-### **ACTION**  
-1. Utilized the **ARIMA model** to forecast monthly sales for 2018.  
-2. Conducted **customer churn analysis** to identify patterns of customer activity and regions with low retention rates.  
-3. Performed **logistics analysis** to pinpoint top-performing product categories and inefficiencies.  
-4. Investigated the sales decline in **November and December 2017** due to competitive market factors.  
-5. Analyzed risks from supplier dependencies and proposed solutions to mitigate disruptions.  
-6. Identified and recommended the discontinuation of products with consistently low sales.  
-
----
-
-### **RESULT**  
-1. Sales are forecasted to increase by **5.91%** in 2018.  
-2. Retention rates in Africa, Asia, and Oceania are below **40%**, highlighting regions with high churn.  
-3. Customer activity peaks at **4 PM and 10 PM**, especially on weekends.  
-4. November and December sales dropped due to external competition, notably Alibaba's **Singles Day** event generating $25.3 billion in sales.  
-5. Uniform monthly discounts were identified as ineffective; festival or time-limited sales are recommended.  
-6. Over **50% of orders** experienced delayed delivery.  
-7. Products such as **CDs, baby products, soccer, and basketball items** have low demand and contribute to losses.  
-
----
-
-### **SOLUTION**  
-1. Introduce **festival-based sales** targeting Africa, Asia, and Oceania to boost retention.  
-2. Implement **region-specific marketing campaigns** during weekends from **4 PM to 10 PM**.  
-3. Diversify suppliers and establish risk assessment protocols to mitigate supply chain disruptions.  
-4. Optimize delivery routes to reduce delays.  
-5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
-
----
-
 ## Dataset
 
 Original Dataset: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
@@ -135,8 +96,47 @@ Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/mai
 
 ---
 
+### **TASK**  
+1. Reduce customer churn.  
+2. Improve logistics management.  
+3. Increase product sales.  
+4. Enhance customer satisfaction.  
+5. Achieve cost reduction.  
+
+---
+
+### **ACTION**  
+1. Utilized the **ARIMA model** to forecast monthly sales for 2018.  
+2. Conducted **customer churn analysis** to identify patterns of customer activity and regions with low retention rates.  
+3. Performed **logistics analysis** to pinpoint top-performing product categories and inefficiencies.  
+4. Investigated the sales decline in **November and December 2017** due to competitive market factors.  
+5. Analyzed risks from supplier dependencies and proposed solutions to mitigate disruptions.  
+6. Identified and recommended the discontinuation of products with consistently low sales.  
+
+---
+
+### **RESULT**  
+1. Sales are forecasted to increase by **5.91%** in 2018.  
+2. Retention rates in Africa, Asia, and Oceania are below **40%**, highlighting regions with high churn.  
+3. Customer activity peaks at **4 PM and 10 PM**, especially on weekends.  
+4. November and December sales dropped due to external competition, notably Alibaba's **Singles Day** event generating $25.3 billion in sales.  
+5. Uniform monthly discounts were identified as ineffective; festival or time-limited sales are recommended.  
+6. Over **50% of orders** experienced delayed delivery.  
+7. Products such as **CDs, baby products, soccer, and basketball items** have low demand and contribute to losses.  
+
+---
+
+### **SOLUTION**  
+1. Introduce **festival-based sales** targeting Africa, Asia, and Oceania to boost retention.  
+2. Implement **region-specific marketing campaigns** during weekends from **4 PM to 10 PM**.  
+3. Diversify suppliers and establish risk assessment protocols to mitigate supply chain disruptions.  
+4. Optimize delivery routes to reduce delays.  
+5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
+
+---
+
 ## Data Cleaning
-After loading the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
+After loading the data, I needed to clean it up so that it was usable for our model. I made the following changes:
 
 *	Remove duplicates
 *	Drop null values 
@@ -156,8 +156,25 @@ I looked at the distributions of the data and the value counts for the various c
 | **Product Performance Analysis** | **Geographical Analysis** |  
 | ![Product Performance](https://github.com/user-attachments/assets/b45bc7cb-2c75-43c9-be8d-d53dad0205b2) | ![Country Performance](https://github.com/user-attachments/assets/bb53f3f6-9ef7-420b-b15e-cc58115bffd0)  
 
+---
+## Model Building 
+
+First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+
+I tried three different models and evaluated them using Mean Absolute Error  and accuracy precentage. The model accuracy is low because of sudden decrease in sales for last two month.   
+
+I tried three different models:
+* **Prophet (fbprophet):** The Prophet model was prone to overfitting, making it unsuitable for our dataset.
+* **SARIMA:** The SARIMA model was ineffective due to the lack of pronounced seasonality in the data.
+* **ARIMA:** The ARIMA model demonstrated the highest accuracy and provided practical, reliable results for forecasting.
+
+## Model performance
+The ARIMA model outperformed the other approaches on the test and validation sets. 
+*	**Prophet**: Accuracy Percentage = 67%
+*	**ARIMA**: Accuracy Percentage = 88%  
 
 ---
+
 ### SALES ANALYSIS:  
 **SALES KPI:**  
 
