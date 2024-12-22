@@ -97,6 +97,17 @@ After loading the data, I needed to clean it up so that it was usable for our mo
 
 ---
 
+## EDA  
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
+
+| **Shipping Performance Analysis** | **Order Pattern Analysis** |  
+|:----------------------------------:|:---------------------------:|  
+| ![Shipping Performance](https://github.com/user-attachments/assets/86f23d14-1df2-4e39-b38a-957782ce4164) | ![Order Pattern](https://github.com/user-attachments/assets/039252ad-015f-4f83-b2ef-d1febafa23fe) |  
+| **Product Performance Analysis** | **Geographical Analysis** |  
+| ![Product Performance](https://github.com/user-attachments/assets/b45bc7cb-2c75-43c9-be8d-d53dad0205b2) | ![Country Performance](https://github.com/user-attachments/assets/bb53f3f6-9ef7-420b-b15e-cc58115bffd0)  
+
+
+---
 ### SALES ANALYSIS:  
 **SALES KPI:**  
 
