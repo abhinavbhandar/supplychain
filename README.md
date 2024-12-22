@@ -51,8 +51,13 @@ The client is experiencing a significant decline in sales over the past two mont
 
 ---
 ### Code and Resources Used
+
 **Python version:** 3.10.12  
-**Packages:** pandas, numpy, sklearn, matplotlib, seaborn
+**Packages:** pandas, numpy, sklearn, matplotlib, seaborn  
+**Software:** Power Bi  
+**Data Source:** [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)  
+  
+---
 ### DATASET
 
 FORECAST RESULT: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
