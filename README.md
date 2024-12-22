@@ -50,7 +50,9 @@ The client is experiencing a significant decline in sales over the past two mont
 5. Discontinue low-demand products like CDs, baby products, soccer, and basketball items.  
 
 ---
-
+### Code and Resources Used
+**Python version:** 3.10.12  
+**Packages:** pandas, numpy, sklearn, matplotlib, seaborn
 ### DATASET
 
 FORECAST RESULT: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
