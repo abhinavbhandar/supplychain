@@ -14,11 +14,27 @@ This project analyzes the supply chain operations of DataCo Global, focusing on 
 
 ## Table of Contents
 - [Resources Used](#code-and-resources-used)
-- [Dataset](#dataset)
+  - [Code and Resources Used](#code-and-resources-used)
+  - [Tools and Platforms Used](#tools-and-platforms-used)
+- [Data](#dataset)
+  - [Dataset](#dataset)
+  - [Meta Data](#meta-data)
 - [Analysis & Finding](#subject)
+  - [Subject](#subject)
+  - [Task](#task)
+  - [Action](#action)
+  - [Result](#result)
+  - [Solution](#solution)
 - [Steps and Process](#data-cleaning)
+  - [Data Cleaning](#data-cleaning)
+  - [EDA](#eda)
+  - [Model Building](#model-building)
 - [Dashboard](#sales-analysis)
-
+  - [Sales Analysis](#sales-analysis)
+  - [Logistics Analysis](#logistics-analysis)
+  - [Customer Churn Analysis](#customer-churn-analysis)
+  - [Data Modeling](#data-model-snowflake-schema)
+  - [Conclusion](#conclusion)
 ---
 
 ## Code and Resources Used
