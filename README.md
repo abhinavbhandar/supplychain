@@ -12,6 +12,15 @@ This project analyzes the supply chain operations of DataCo Global, focusing on 
 
 ---
 
+## Table of Contents
+- [Resources Used](#code-and-resources-used)
+- [Dataset](#dataset)
+- [Analysis & Finding](#subject)
+- [Steps and Process](#data-cleaning)
+- [Dashboard](#sales-analysis)
+
+---
+
 ## Code and Resources Used
 
 **Python version:** 3.10.12  
@@ -47,7 +56,7 @@ Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/mai
 
 ---
 
-## metadata
+## Meta Data
 |Column Name|Non-Null Count|Dtype|Memory Usage|
 |---|---|---|---|
 |Type|180519|object|11405789|
