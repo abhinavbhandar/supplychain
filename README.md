@@ -14,38 +14,24 @@ This project analyzes the supply chain operations of DataCo Global, focusing on 
 
 ## Table of Contents
 - [Resources Used](#code-and-resources-used)
-  - [Code and Resources Used](#code-and-resources-used)
-  - [Tools and Platforms Used](#tools-and-platforms-used)
-- [Data](#dataset)
-  - [Dataset](#dataset)
-  - [Meta Data](#meta-data)
+- [Dataset](#dataset)
 - [Analysis & Finding](#subject)
-  - [Subject](#subject)
-  - [Task](#task)
-  - [Action](#action)
-  - [Result](#result)
-  - [Solution](#solution)
 - [Steps and Process](#data-cleaning)
-  - [Data Cleaning](#data-cleaning)
-  - [EDA](#eda)
-  - [Model Building](#model-building)
 - [Dashboard](#sales-analysis)
-  - [Sales Analysis](#sales-analysis)
-  - [Logistics Analysis](#logistics-analysis)
-  - [Customer Churn Analysis](#customer-churn-analysis)
-  - [Data Modeling](#data-model-snowflake-schema)
-  - [Conclusion](#conclusion)
+- [Conclusion](#conclusion)
+
 ---
 
-## Code and Resources Used
+## Resources Used
+
+### Code and Resources Used
 
 **Python version:** 3.10.12  
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn, pmdarima, statsmodel, warnings, datetime  
 **Data Source:** [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)  
   
----
 
-## Tools and Platforms Used
+### Tools and Platforms Used
 
 **Power BI**  
 Purpose: For creating interactive dashboards and data visualization to analyze supply chain trends and performance metrics.
@@ -66,13 +52,15 @@ Purpose: Used for hosting project documentation, versioning, and sharing notes r
 
 ## Dataset
 
+### Data
+
 Original Dataset: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/DataCoSupplyChainDataset.csv.zip)  
 Fact & Dimension Tables: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/Supply%20chain%20tables.rar)  
 Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/main/forecast.csv)  
 
----
 
-## Meta Data
+### Meta Data
+
 |Column Name|Non-Null Count|Dtype|Memory Usage|
 |---|---|---|---|
 |Type|180519|object|11405789|
@@ -116,10 +104,11 @@ Forecast Result: [*LINK*](https://github.com/abhinavbhandar/supplychain/blob/mai
 
 ---
 
+## Analysis & Finding
+
 ### **SUBJECT**  
 The client is experiencing a significant decline in sales over the past two months and aims to uncover the root causes. This analysis will target customer churn, future sales trends, and supply chain inefficiencies to optimize operations and enhance customer satisfaction.
 
----
 
 ### **TASK**  
 1. Reduce customer churn.  
@@ -128,7 +117,6 @@ The client is experiencing a significant decline in sales over the past two mont
 4. Enhance customer satisfaction.  
 5. Achieve cost reduction.  
 
----
 
 ### **ACTION**  
 1. Utilized the **ARIMA model** to forecast monthly sales for 2018.  
@@ -138,7 +126,6 @@ The client is experiencing a significant decline in sales over the past two mont
 5. Analyzed risks from supplier dependencies and proposed solutions to mitigate disruptions.  
 6. Identified and recommended the discontinuation of products with consistently low sales.  
 
----
 
 ### **RESULT**  
 1. Sales are forecasted to increase by **5.91%** in 2018.  
@@ -149,7 +136,6 @@ The client is experiencing a significant decline in sales over the past two mont
 6. Over **50% of orders** experienced delayed delivery.  
 7. Products such as **CDs, baby products, soccer, and basketball items** have low demand and contribute to losses.  
 
----
 
 ### **SOLUTION**  
 1. Introduce **festival-based sales** targeting Africa, Asia, and Oceania to boost retention.  
@@ -160,7 +146,9 @@ The client is experiencing a significant decline in sales over the past two mont
 
 ---
 
-## Data Cleaning
+## Steps & Process
+
+### Data Cleaning
 After loading the data, I needed to clean it up so that it was usable for our model. I made the following changes:
 
 *	Remove duplicates
@@ -170,9 +158,8 @@ After loading the data, I needed to clean it up so that it was usable for our mo
 *	Standardize text fields 
 *	drop unwanted columns 
 
----
 
-## EDA  
+### EDA  
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
 | **Shipping Performance Analysis** | **Order Pattern Analysis** |  
@@ -181,8 +168,8 @@ I looked at the distributions of the data and the value counts for the various c
 | **Product Performance Analysis** | **Geographical Analysis** |  
 | ![Product Performance](https://github.com/user-attachments/assets/b45bc7cb-2c75-43c9-be8d-d53dad0205b2) | ![Country Performance](https://github.com/user-attachments/assets/bb53f3f6-9ef7-420b-b15e-cc58115bffd0)  
 
----
-## Model Building 
+
+### Model Building 
 
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
 
@@ -193,14 +180,16 @@ I tried three different models:
 * **SARIMA:** The SARIMA model was ineffective due to the lack of pronounced seasonality in the data.
 * **ARIMA:** The ARIMA model demonstrated the highest accuracy and provided practical, reliable results for forecasting.
 
-## Model performance
+### Model performance
 The ARIMA model outperformed the other approaches on the test and validation sets. 
 *	**Prophet**: Accuracy Percentage = 67.23%
 *	**ARIMA**: Accuracy Percentage = 88.44%  
 
 ---
 
-### SALES ANALYSIS:  
+## Dashboard
+
+### Sales Analysis:  
 
 | **Sales KPI**        | **DAX Measure**                                                                                           |
 |-----------------------|----------------------------------------------------------------------------------------------------------|
@@ -214,9 +203,9 @@ The ARIMA model outperformed the other approaches on the test and validation set
 
 ![image](https://github.com/user-attachments/assets/027a52ca-86bb-4ebd-9a54-e8de8c027370)
 
----
 
-### LOGISTICS ANALYSIS: 
+
+### Logistics Analysis: 
 
 | **Supply Chain KPI** | **DAX Measure**                                                                                                                                                                                                                                         |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -228,9 +217,8 @@ The ARIMA model outperformed the other approaches on the test and validation set
 
 ![image](https://github.com/user-attachments/assets/24ab8ccc-59c6-410d-9815-d8e7d5011463)
 
----
 
-### CUSTOMER CHURN ANALYSIS:  
+### Customer Churn Analysis:  
 
 | **Customer KPI**      | **DAX Measure**                                                                                                                                                                                                                                       |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -242,16 +230,15 @@ The ARIMA model outperformed the other approaches on the test and validation set
 
 ![image](https://github.com/user-attachments/assets/38441698-9038-4d16-b185-dc86046c62c0)
 
----
 
-### DATA MODEL: SNOWFLAKE SCHEMA  
+### Data Model: Snowflake Schena  
 ![image](https://github.com/user-attachments/assets/bbc4ca3a-4727-4eec-8a4d-0c25c9ade6f1)
 
 ---
 
 ### CONCLUSION
 
-the analysis highlights critical areas impacting sales and operational efficiency within the supply chain. Key findings include customer churn in specific regions, inefficiencies in logistics, and external competition causing sales dips during peak periods. By implementing targeted marketing, optimizing delivery, diversifying suppliers, and discontinuing underperforming products, the client can address these challenges and improve overall performance.
+The analysis highlights critical areas impacting sales and operational efficiency within the supply chain. Key findings include customer churn in specific regions, inefficiencies in logistics, and external competition causing sales dips during peak periods. By implementing targeted marketing, optimizing delivery, diversifying suppliers, and discontinuing underperforming products, the client can address these challenges and improve overall performance.
 
 LINK: 
 
